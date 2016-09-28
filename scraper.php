@@ -7,11 +7,10 @@ require 'scraperwiki/simple_html_dom.php';
 // // Read in a page
 $html = scraperwiki::scrape('https://scholar.google.co.uk/scholar?hl=en&q="Copyright+Policy"');
 //
-var_dump($html);
 // // Find something on the page using css selectors
-// $dom = new simple_html_dom();
-// $dom->load($html);
-// print_r($dom->find("table.list"));
+$dom = new simple_html_dom();
+$dom->load($html);
+print_r($dom->find("gs_r"));
 //
 // // Write out to the sqlite database using scraperwiki library
 // scraperwiki::save_sqlite(array('name'), array('name' => 'susan', 'occupation' => 'software developer'));
