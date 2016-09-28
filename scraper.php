@@ -10,7 +10,7 @@ $html = scraperwiki::scrape('https://scholar.google.co.uk/scholar?hl=en&q="Copyr
 // // Find something on the page using css selectors
 $dom = new simple_html_dom();
 $dom->load($html);
-print_r($dom->find("gs_r"));
+print_r($dom->find("div.gs_r"));
 //
 // // Write out to the sqlite database using scraperwiki library
 // scraperwiki::save_sqlite(array('name'), array('name' => 'susan', 'occupation' => 'software developer'));
